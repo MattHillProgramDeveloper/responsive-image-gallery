@@ -1,0 +1,74 @@
+
+  input[type="radio"]{
+    display: none;
+  }
+  
+  
+  input[name="size"]+label{
+      background-color: $grey3;
+      border: solid $grey1 3px;
+      padding: 1em 3em;
+      @include mq(medium){
+        padding: .25em 1.25em;
+      }
+      @include mq(large){
+        padding: .5em 2em;
+      }
+      @include mq(largest){
+        padding: 1.5em 3em;
+      }
+  }  
+  
+  input[name="color"]+label{
+    padding: .75em 2.25em;
+    border: solid $grey1 3px;
+    @include mq(medium){
+      padding: .25em 1em;
+    }
+    @include mq(largest){
+      padding: 1em 2em;
+    }
+    
+  }
+  
+  #calicolabel{
+    background-color: $catcalico;
+    color: $catcalico;
+  }
+  
+  #orangelabel{
+    background-color: $catorange;
+    color: $catorange;
+  }
+  
+  #blacklabel{
+    background-color: $catblack;
+    color: $catblack;
+  }
+  
+  #greylabel{
+    background-color: $catgrey;
+    color: $catgrey;
+  }
+  
+  input[type="radio"]:checked+label{
+    border: solid $selected 3px;
+  }
+
+  input[type="submit"]{
+    background-color: $selected;
+    padding: 20px;
+    margin: 10px;
+    border: none;
+    width: 95%;
+    @include font-color-size($grey1, 1.5em, bold);
+    @include mq(medium){
+      width: 88%;
+    }
+    @include mq(large){
+      margin: 225px 10px 0 10px;
+    }
+    @include mq(largest){
+      margin: 400px 10px 0 10px;
+    }
+}

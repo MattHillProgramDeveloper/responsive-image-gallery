@@ -1,0 +1,64 @@
+input[type="radio"] {
+  display: none; }
+
+input[name="size"] + label {
+  background-color: #CCCCCC;
+  border: solid #EEEEEE 3px;
+  padding: 1em 3em; }
+  @media (min-width: 600px) {
+    input[name="size"] + label {
+      padding: .25em 1.25em; } }
+  @media (min-width: 800px) {
+    input[name="size"] + label {
+      padding: .5em 2em; } }
+  @media (min-width: 1032px) {
+    input[name="size"] + label {
+      padding: 1.5em 3em; } }
+
+input[name="color"] + label {
+  padding: .75em 2.25em;
+  border: solid #EEEEEE 3px; }
+  @media (min-width: 600px) {
+    input[name="color"] + label {
+      padding: .25em 1em; } }
+  @media (min-width: 1032px) {
+    input[name="color"] + label {
+      padding: 1em 2em; } }
+
+#calicolabel {
+  background-color: #6d3f0b;
+  color: #6d3f0b; }
+
+#orangelabel {
+  background-color: #f3b15c;
+  color: #f3b15c; }
+
+#blacklabel {
+  background-color: black;
+  color: black; }
+
+#greylabel {
+  background-color: #AAAAAA;
+  color: #AAAAAA; }
+
+input[type="radio"]:checked + label {
+  border: solid #258d1b 3px; }
+
+input[type="submit"] {
+  background-color: #258d1b;
+  padding: 20px;
+  margin: 10px;
+  border: none;
+  width: 95%;
+  color: #EEEEEE;
+  font-size: 1.5em;
+  font-weight: bold; }
+  @media (min-width: 600px) {
+    input[type="submit"] {
+      width: 88%; } }
+  @media (min-width: 800px) {
+    input[type="submit"] {
+      margin: 225px 10px 0 10px; } }
+  @media (min-width: 1032px) {
+    input[type="submit"] {
+      margin: 400px 10px 0 10px; } }

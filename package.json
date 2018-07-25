@@ -1,0 +1,32 @@
+{
+  "name": "responsive-image-gallery",
+  "version": "0.1.0",
+  "description": "animation practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattHillProgramDeveloper/responsive-image-gallery.git"
+  },
+  "keywords": [
+    "animation",
+    "gulp",
+    "sass",
+    "scss",
+    "responsive",
+    "gallery"
+  ],
+  "author": "Matt Hill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattHillProgramDeveloper/responsive-image-gallery/issues"
+  },
+  "homepage": "https://github.com/MattHillProgramDeveloper/responsive-image-gallery#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
