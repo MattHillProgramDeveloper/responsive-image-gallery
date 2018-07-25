@@ -1,64 +1,57 @@
-input[type="radio"] {
-  display: none; }
+@import url("https://use.typekit.net/nnw8apr.css");
+header p {
+  margin: 0;
+  border: 0;
+  padding: 0; }
 
-input[name="size"] + label {
-  background-color: #CCCCCC;
-  border: solid #EEEEEE 3px;
-  padding: 1em 3em; }
-  @media (min-width: 600px) {
-    input[name="size"] + label {
-      padding: .25em 1.25em; } }
-  @media (min-width: 800px) {
-    input[name="size"] + label {
-      padding: .5em 2em; } }
-  @media (min-width: 1032px) {
-    input[name="size"] + label {
-      padding: 1.5em 3em; } }
+body {
+  background-color: #F8F8F8;
+  font-family: Georgia, Arial, Helvetica, sans-serif; }
 
-input[name="color"] + label {
-  padding: .75em 2.25em;
-  border: solid #EEEEEE 3px; }
-  @media (min-width: 600px) {
-    input[name="color"] + label {
-      padding: .25em 1em; } }
-  @media (min-width: 1032px) {
-    input[name="color"] + label {
-      padding: 1em 2em; } }
+header {
+  margin: 3%; }
+  header h1 {
+    margin: 10px 0;
+    font-family: "Futura PT Bold", Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #333333;
+    font-size: 36px;
+    font-weight: bold; }
+  header p {
+    color: #666666;
+    font-size: 12px;
+    font-weight: inherit;
+    text-align: center; }
+  header img {
+    width: 3%;
+    margin-left: 48.5%; }
 
-#calicolabel {
-  background-color: #6d3f0b;
-  color: #6d3f0b; }
+main {
+  overflow: auto; }
 
-#orangelabel {
-  background-color: #f3b15c;
-  color: #f3b15c; }
+article {
+  position: relative;
+  width: 30%;
+  margin: 2.5% 0 0 2.5%;
+  float: left;
+  height: 190px;
+  overflow: hidden; }
 
-#blacklabel {
-  background-color: black;
-  color: black; }
+article:nth-child(3n+1) {
+  clear: left; }
 
-#greylabel {
-  background-color: #AAAAAA;
-  color: #AAAAAA; }
-
-input[type="radio"]:checked + label {
-  border: solid #258d1b 3px; }
-
-input[type="submit"] {
-  background-color: #258d1b;
-  padding: 20px;
-  margin: 10px;
-  border: none;
-  width: 95%;
-  color: #EEEEEE;
-  font-size: 1.5em;
-  font-weight: bold; }
-  @media (min-width: 600px) {
-    input[type="submit"] {
-      width: 88%; } }
-  @media (min-width: 800px) {
-    input[type="submit"] {
-      margin: 225px 10px 0 10px; } }
-  @media (min-width: 1032px) {
-    input[type="submit"] {
-      margin: 400px 10px 0 10px; } }
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  footer p {
+    margin-top: 10%;
+    font-family: "Futura PT", Arial, Helvetica, sans-serif;
+    color: #333333;
+    font-size: 10px;
+    font-weight: inherit; }
+    footer p a {
+      text-decoration: none;
+      color: #666666; }
+    footer p a:hover {
+      text-decoration: underline; }

@@ -37,17 +37,18 @@ function displayKitties(kittyArray){
         let wrapper = document.querySelector('main');
     for (let i = 0; i < kittyArray.length; i++){
 
-        let imageURL = kittyArray[i].urls.thumb;
+        let imageURL = kittyArray[i].urls.small;
         let imageLikes = kittyArray[i].likes;
         let photographer = kittyArray[i].user.name;
         let photographerPage = kittyArray[i].user.links.html;
         let description = kittyArray[i].description
 
-        catGrid += '<figure class="item">';
+        catGrid += '<article class="item">';
         catGrid += '<img src=' + imageURL + ' alt="Image of ' + description + '"/>';
+        catGrid += '<div class="slideinfo">'
         catGrid += '<p class="photographer"><a href="'+photographerPage+'">'+photographer+'</a></p>';
         catGrid += '<p class="likes">Likes:'+imageLikes+'</p>';
-        catGrid += "</figure>"
+        catGrid += "</div></article>"
     }
     wrapper.innerHTML=catGrid;
 }

@@ -1,0 +1,76 @@
+body{
+    background-color: $grey1;
+    font-family: $fontstack1;
+}
+
+header{
+    margin:3%;
+    h1{
+        
+        margin: 10px 0;
+        font-family: $fontstack2;
+        text-align: center;
+        @include font-color-size($grey5, 36px, bold);
+    }
+    p{
+        @extend %zero-edges;
+        @include font-color-size($grey4, 12px, inherit);
+        text-align: center;
+    }
+    img{
+
+        width: 3%;
+        margin-left: 48.5%;
+    }
+}
+
+
+ main{
+     overflow: auto;
+
+ }
+
+
+    article{
+        position: relative;
+        width:30%;
+        margin: 2.5% 0 0 2.5%;
+        float: left;
+        height: 190px;
+        overflow: hidden;
+        // img{
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     height: auto;
+        //     width: auto;
+        // }
+    }
+
+    article:nth-child(3n+1){
+        clear: left;
+    }
+
+// .slideinfo{
+//     display: none;
+// }
+
+footer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    p{
+        margin-top: 10%;
+        font-family: $fontstack3;
+        @include font-color-size($grey5, 10px, inherit);
+        a{
+            text-decoration: none;
+            color: $grey4;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+
+}
