@@ -69,6 +69,7 @@ logo.addEventListener('click', function () {
         document.querySelector("main").classList.remove("spinner");
     }else{
         document.querySelector("main").classList.add("spinner");
+        document.querySelector("#globe").classList.remove("wiggles");
     }
     
     

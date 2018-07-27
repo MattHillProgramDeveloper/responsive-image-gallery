@@ -110,6 +110,25 @@ footer{
     animation: spin 2.8s ease-in-out;
 }
 
+.wiggles{
+    animation: wiggle 2s ease-in-out 10s infinite;
+}
+
 @keyframes spin{
     to {transform: rotateY(1080deg);}
+}
+
+@keyframes wiggle{
+    0% {transform: translateX(0px);}
+    1% {transform: translateX(2px);}
+    2% {transform: translateX(-4px);}
+    3% {transform: translateX(6px);}
+    4% {transform: translateX(-8px);}
+    5% {transform: translateX(0px);}
+    6% {transform: translateX(2px);}
+    7% {transform: translateX(-4px);}
+    8% {transform: translateX(6px);}
+    9% {transform: translateX(-8px);}
+    10% {transform: translateX(0px);}
+    100% {transform: translateX(0px);}
 }
