@@ -6,7 +6,8 @@ header p, article .pictureframe {
 
 body {
   background-color: #F8F8F8;
-  font-family: Georgia, Arial, Helvetica, sans-serif; }
+  font-family: Georgia, Arial, Helvetica, sans-serif;
+  perspective: 800px; }
 
 header {
   margin: 3%; }
@@ -35,8 +36,7 @@ article {
   margin: 2.5% 0 0 2.5%;
   float: left;
   height: 190px;
-  overflow: hidden;
-  perspective: 800px; }
+  overflow: hidden; }
   article:hover .slideinfo {
     transform: translateY(-70px); }
   article .pictureframe {
@@ -78,3 +78,10 @@ footer {
       color: #666666; }
     footer p a:hover {
       text-decoration: underline; }
+
+.spinner {
+  animation: spin 2.8s ease-in-out; }
+
+@keyframes spin {
+  to {
+    transform: rotateY(1080deg); } }

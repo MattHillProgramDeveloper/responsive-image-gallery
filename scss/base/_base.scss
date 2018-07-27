@@ -1,6 +1,8 @@
 body{
     background-color: $grey1;
     font-family: $fontstack1;
+    //animation setup for parent container
+    perspective: 800px;
 }
 
 header{
@@ -29,6 +31,8 @@ header{
 
  }
 
+
+
 article{
 
     position: relative;
@@ -37,8 +41,7 @@ article{
     float: left;
     height: 190px;
     overflow: hidden;
-    //animation setup for parent container
-    perspective: 800px;
+
     
     //this makes the .slidinfo class when the mouse hovers over the parent article container
     &:hover{
@@ -101,4 +104,12 @@ footer{
         }
     }
 
+}
+
+.spinner{
+    animation: spin 2.8s ease-in-out;
+}
+
+@keyframes spin{
+    to {transform: rotateY(1080deg);}
 }

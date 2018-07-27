@@ -1,7 +1,7 @@
 
 //public access key for unsplash
 const pubKey = "b1932e62b44bf6eeec26b0234b0d535518f6a9c6b8aa2458833812514bc01439";
-let catframe = [];
+let logo = document.querySelector("#logo");
 
 function runXHR(){
         // Create an AJAX or Fetch request that writes
@@ -21,15 +21,9 @@ function runXHR(){
                 }
                 else {
                     displayKitties(responseObject.results);
-
                 }
-
-
             }
         };
-
-        
-
     }
 
 function displayKitties(kittyArray){
@@ -65,10 +59,19 @@ function displayKitties(kittyArray){
     
 }
 
-
-
 runXHR();
 
 
+//on click we will add a spinner animation to the main body 
+logo.addEventListener('click', function () {
+    
+    if(document.querySelector("main").classList.contains("spinner")){
+        document.querySelector("main").classList.remove("spinner");
+    }else{
+        document.querySelector("main").classList.add("spinner");
+    }
+    
+    
+}, false);
 
 console.log("index.js loaded")
