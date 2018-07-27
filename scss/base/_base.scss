@@ -24,12 +24,10 @@ header{
     }
 }
 
-
  main{
      overflow: auto;
 
  }
-
 
 article{
 
@@ -42,11 +40,11 @@ article{
     //animation setup for parent container
     perspective: 800px;
     
-
+    //this makes the .slidinfo class when the mouse hovers over the parent article container
     &:hover{
         .slideinfo{
-            //adding in the animation
-            animation: slideUp 1s ease-in-out;
+            //adding in the transition
+            transform: translateY(-70px);
         }
     }
  
@@ -61,12 +59,8 @@ article{
         background-color: $grey5transp;
         font-family: $fontstack3;
         @include font-color-size($grey1, 16px, inherit);
-
-
-
-
-
-    }
+        transition: 1s;
+        }
 
  
 
@@ -83,20 +77,11 @@ article{
     }
 }
 
-//this aniimation is for the above .slideinfo class
-
-@keyframes slideUp {
-    from {transform: translateY(0px);}
-    to {transform: translateY(-70px);}
-}
 
 article:nth-child(3n+1){
     clear: left;
 }
 
-// .slideinfo{
-//     display: none;
-// }
 
 footer{
     display:flex;

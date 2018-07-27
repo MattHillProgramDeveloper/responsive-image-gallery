@@ -38,7 +38,7 @@ article {
   overflow: hidden;
   perspective: 800px; }
   article:hover .slideinfo {
-    animation: slideUp 1s ease-in-out; }
+    transform: translateY(-70px); }
   article .pictureframe {
     height: 190px;
     overflow: hidden; }
@@ -48,7 +48,8 @@ article {
     font-family: "Futura PT", Arial, Helvetica, sans-serif;
     color: #F8F8F8;
     font-size: 16px;
-    font-weight: inherit; }
+    font-weight: inherit;
+    transition: 1s; }
   article p {
     margin: 4px; }
   article a {
@@ -58,12 +59,6 @@ article {
     font-weight: inherit; }
   article a:hover {
     text-decoration: underline; }
-
-@keyframes slideUp {
-  from {
-    transform: translateY(0px); }
-  to {
-    transform: translateY(-70px); } }
 
 article:nth-child(3n+1) {
   clear: left; }
