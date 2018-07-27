@@ -38,7 +38,7 @@ article {
   overflow: hidden;
   perspective: 800px; }
   article:hover .slideinfo {
-    animation-play-state: running; }
+    animation: slideUp 1s ease-in-out; }
   article .pictureframe {
     height: 190px;
     overflow: hidden; }
@@ -48,10 +48,7 @@ article {
     font-family: "Futura PT", Arial, Helvetica, sans-serif;
     color: #F8F8F8;
     font-size: 16px;
-    font-weight: inherit;
-    animation: slideUp 1s;
-    animation-fill-mode: forwards;
-    animation-play-state: paused; }
+    font-weight: inherit; }
   article p {
     margin: 4px; }
   article a {

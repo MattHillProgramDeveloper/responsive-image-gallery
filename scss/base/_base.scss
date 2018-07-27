@@ -45,7 +45,8 @@ article{
 
     &:hover{
         .slideinfo{
-            animation-play-state: running;
+            //adding in the animation
+            animation: slideUp 1s ease-in-out;
         }
     }
  
@@ -61,10 +62,7 @@ article{
         font-family: $fontstack3;
         @include font-color-size($grey1, 16px, inherit);
 
-        //adding in the animation
-        animation: slideUp 1s;
-        animation-fill-mode: forwards;
-        animation-play-state: paused;
+
 
 
 
