@@ -31,25 +31,70 @@ header{
  }
 
 
-    article{
-        position: relative;
-        width:30%;
-        margin: 2.5% 0 0 2.5%;
-        float: left;
+article{
+
+    position: relative;
+    width:30%;
+    margin: 2.5% 0 0 2.5%;
+    float: left;
+    height: 190px;
+    overflow: hidden;
+    //animation setup for parent container
+    perspective: 800px;
+    
+
+    &:hover{
+        .slideinfo{
+            animation-play-state: running;
+        }
+    }
+ 
+    .pictureframe{
+        @extend %zero-edges;
         height: 190px;
         overflow: hidden;
-        // img{
-        //     position: absolute;
-        //     left: 0;
-        //     top: 0;
-        //     height: auto;
-        //     width: auto;
-        // }
     }
 
-    article:nth-child(3n+1){
-        clear: left;
+    .slideinfo{
+        padding: 8px;
+        background-color: $grey5transp;
+        font-family: $fontstack3;
+        @include font-color-size($grey1, 16px, inherit);
+
+        //adding in the animation
+        animation: slideUp 1s;
+        animation-fill-mode: forwards;
+        animation-play-state: paused;
+
+
+
     }
+
+ 
+
+    p{
+        margin: 4px;
+    }
+
+    a{
+        text-decoration: none;
+        @include font-color-size($grey1, 16px, inherit);
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+//this aniimation is for the above .slideinfo class
+
+@keyframes slideUp {
+    from {transform: translateY(0px);}
+    to {transform: translateY(-70px);}
+}
+
+article:nth-child(3n+1){
+    clear: left;
+}
 
 // .slideinfo{
 //     display: none;

@@ -1,5 +1,5 @@
 @import url("https://use.typekit.net/nnw8apr.css");
-header p {
+header p, article .pictureframe {
   margin: 0;
   border: 0;
   padding: 0; }
@@ -35,7 +35,38 @@ article {
   margin: 2.5% 0 0 2.5%;
   float: left;
   height: 190px;
-  overflow: hidden; }
+  overflow: hidden;
+  perspective: 800px; }
+  article:hover .slideinfo {
+    animation-play-state: running; }
+  article .pictureframe {
+    height: 190px;
+    overflow: hidden; }
+  article .slideinfo {
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: "Futura PT", Arial, Helvetica, sans-serif;
+    color: #F8F8F8;
+    font-size: 16px;
+    font-weight: inherit;
+    animation: slideUp 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused; }
+  article p {
+    margin: 4px; }
+  article a {
+    text-decoration: none;
+    color: #F8F8F8;
+    font-size: 16px;
+    font-weight: inherit; }
+  article a:hover {
+    text-decoration: underline; }
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(-70px); } }
 
 article:nth-child(3n+1) {
   clear: left; }

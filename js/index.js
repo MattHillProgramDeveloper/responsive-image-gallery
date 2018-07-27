@@ -1,7 +1,7 @@
 
 //public access key for unsplash
 const pubKey = "b1932e62b44bf6eeec26b0234b0d535518f6a9c6b8aa2458833812514bc01439";
-
+let catframe = [];
 
 function runXHR(){
         // Create an AJAX or Fetch request that writes
@@ -21,6 +21,7 @@ function runXHR(){
                 }
                 else {
                     displayKitties(responseObject.results);
+
                 }
 
 
@@ -48,16 +49,26 @@ function displayKitties(kittyArray){
         let description = kittyArray[i].description
 
         catGrid += '<article class="item">';
+        catGrid += '<div class="pictureframe">'
         catGrid += '<img src="' + smallURL +'" srcset="'+smallURL+' 600w, '+mediumURL+' 1200w, '+largeURL+' 3240w" alt="Image of ' + description + '"/>';
-        catGrid += '<div class="slideinfo">'
-        catGrid += '<p class="photographer"><a href="'+photographerPage+'">'+photographer+'</a></p>';
-        catGrid += '<p class="likes">Likes:'+imageLikes+'</p>';
-        catGrid += "</div></article>"
+        catGrid += '</div>';
+        catGrid += '<div class="slideinfo">';
+        catGrid += '<p class="photographer">';
+        catGrid += '<img src="images/user-icon.svg">';
+        catGrid += '<a target="_blank" href="'+photographerPage+'"> '+photographer+'</a></p>';
+        catGrid += '<p class="likes">';
+        catGrid += '<img src="images/heart.svg"> '
+        catGrid += imageLikes+'</p>'
+        catGrid += "</div></article>";
     }
     wrapper.innerHTML=catGrid;
+    
 }
 
 
+
 runXHR();
+
+
 
 console.log("index.js loaded")
