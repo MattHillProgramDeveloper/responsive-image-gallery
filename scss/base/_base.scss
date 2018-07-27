@@ -21,8 +21,16 @@ header{
     }
     img{
 
-        width: 3%;
-        margin-left: 48.5%;
+        width: 20%;
+        margin-left: 40%;
+        @include mq(medium){
+            width: 6%;
+            margin-left: 47%;
+          }
+        @include mq(large){
+            width: 3%;
+            margin-left: 48.5%;
+        } 
     }
 }
 
@@ -35,40 +43,62 @@ header{
 
 article{
 
-    position: relative;
-    width:30%;
-    margin: 2.5% 0 0 2.5%;
+    width:80%;
+    margin: 10%;
     float: left;
-    height: 190px;
-    overflow: hidden;
+    background-color: black;
+    @include mq(medium){
+        position: relative;
+        width:30%;
+        margin: 2.5% 0 0 2.5%;
+        float: left;
+        height: 190px;
+        overflow: hidden;
+
+        //this makes the .slideinfo class when the mouse hovers over the parent article container
+        &:hover{
+            .slideinfo{
+                //adding in the transition
+                transform: translateY(-70px);
+            }
+        }
+
+      }
 
     
-    //this makes the .slidinfo class when the mouse hovers over the parent article container
-    &:hover{
-        .slideinfo{
-            //adding in the transition
-            transform: translateY(-70px);
-        }
-    }
+
  
     .pictureframe{
         @extend %zero-edges;
-        height: 190px;
-        overflow: hidden;
+        width:100%;
+        @include mq(medium){
+            height: 190px;
+            overflow: hidden;
+            width: auto;
+        }
+        img{
+            width: 100%;
+            @extend %zero-edges;
+            @include mq(medium){
+                height: 100%;
+                width: 100%;
+            }
+        }
     }
 
     .slideinfo{
+        @extend %zero-edges;
         padding: 8px;
         background-color: $grey5transp;
         font-family: $fontstack3;
         @include font-color-size($grey1, 16px, inherit);
         transition: 1s;
         }
-
- 
-
     p{
-        margin: 4px;
+        @extend %zero-edges;
+        @include mq(medium){
+            margin: 4px;
+        }
     }
 
     a{
@@ -80,9 +110,14 @@ article{
     }
 }
 
-
 article:nth-child(3n+1){
     clear: left;
+}
+
+@media (max-width:599px){
+    article{
+        clear:left;
+    }
 }
 
 

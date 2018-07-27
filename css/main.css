@@ -1,5 +1,5 @@
 @import url("https://use.typekit.net/nnw8apr.css");
-header p, article .pictureframe {
+header p, article .pictureframe, article .pictureframe img, article .slideinfo, article p {
   margin: 0;
   border: 0;
   padding: 0; }
@@ -24,24 +24,48 @@ header {
     font-weight: inherit;
     text-align: center; }
   header img {
-    width: 3%;
-    margin-left: 48.5%; }
+    width: 20%;
+    margin-left: 40%; }
+    @media (min-width: 600px) {
+      header img {
+        width: 6%;
+        margin-left: 47%; } }
+    @media (min-width: 800px) {
+      header img {
+        width: 3%;
+        margin-left: 48.5%; } }
 
 main {
   overflow: auto; }
 
 article {
-  position: relative;
-  width: 30%;
-  margin: 2.5% 0 0 2.5%;
+  width: 80%;
+  margin: 10%;
   float: left;
-  height: 190px;
-  overflow: hidden; }
-  article:hover .slideinfo {
-    transform: translateY(-70px); }
+  background-color: black; }
+  @media (min-width: 600px) {
+    article {
+      position: relative;
+      width: 30%;
+      margin: 2.5% 0 0 2.5%;
+      float: left;
+      height: 190px;
+      overflow: hidden; }
+      article:hover .slideinfo {
+        transform: translateY(-70px); } }
   article .pictureframe {
-    height: 190px;
-    overflow: hidden; }
+    width: 100%; }
+    @media (min-width: 600px) {
+      article .pictureframe {
+        height: 190px;
+        overflow: hidden;
+        width: auto; } }
+    article .pictureframe img {
+      width: 100%; }
+      @media (min-width: 600px) {
+        article .pictureframe img {
+          height: 100%;
+          width: 100%; } }
   article .slideinfo {
     padding: 8px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -50,8 +74,9 @@ article {
     font-size: 16px;
     font-weight: inherit;
     transition: 1s; }
-  article p {
-    margin: 4px; }
+  @media (min-width: 600px) {
+    article p {
+      margin: 4px; } }
   article a {
     text-decoration: none;
     color: #F8F8F8;
@@ -62,6 +87,10 @@ article {
 
 article:nth-child(3n+1) {
   clear: left; }
+
+@media (max-width: 599px) {
+  article {
+    clear: left; } }
 
 footer {
   display: flex;
