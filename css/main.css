@@ -42,7 +42,7 @@ article {
   width: 80%;
   margin: 10%;
   float: left;
-  background-color: black; }
+  background-color: #F8F8F8; }
   @media (min-width: 600px) {
     article {
       position: relative;
@@ -54,19 +54,20 @@ article {
       article:hover .slideinfo {
         transform: translateY(-70px); } }
   article .pictureframe {
-    width: 100%; }
+    width: 300px; }
     @media (min-width: 600px) {
       article .pictureframe {
         height: 190px;
         overflow: hidden;
-        width: auto; } }
+        width: 300px; } }
     article .pictureframe img {
       width: 100%; }
       @media (min-width: 600px) {
         article .pictureframe img {
-          height: 100%;
-          width: 100%; } }
+          height: 190px;
+          width: 300px; } }
   article .slideinfo {
+    width: 284px;
     padding: 8px;
     background-color: rgba(0, 0, 0, 0.8);
     font-family: "Futura PT", Arial, Helvetica, sans-serif;

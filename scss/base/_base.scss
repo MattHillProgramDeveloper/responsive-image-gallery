@@ -46,7 +46,7 @@ article{
     width:80%;
     margin: 10%;
     float: left;
-    background-color: black;
+    background-color: $grey1;
     @include mq(medium){
         position: relative;
         width:30%;
@@ -70,23 +70,24 @@ article{
  
     .pictureframe{
         @extend %zero-edges;
-        width:100%;
+        width: 300px;
         @include mq(medium){
             height: 190px;
             overflow: hidden;
-            width: auto;
+            width: 300px;
         }
         img{
             width: 100%;
             @extend %zero-edges;
             @include mq(medium){
-                height: 100%;
-                width: 100%;
+                height: 190px;
+                width: 300px;
             }
         }
     }
 
     .slideinfo{
+        width: 284px;
         @extend %zero-edges;
         padding: 8px;
         background-color: $grey5transp;
